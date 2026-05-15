@@ -1,0 +1,22 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    "users": {
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "routes": {
+      ".write": "auth != null"
+    },
+    "bus_pings": {
+      ".write": "auth != null"
+    },
+    "eta_updates": {
+      ".write": "auth != null"
+    },
+    "notifications": {
+      ".write": "auth != null"
+    }
+  }
+}

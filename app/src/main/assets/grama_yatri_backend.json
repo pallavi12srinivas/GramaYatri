@@ -1,0 +1,61 @@
+{
+  "users": {
+    "u_ravi": { "uid": "u_ravi", "name": "Ravi", "email": "ravi@example.com", "admin": false },
+    "u_asha": { "uid": "u_asha", "name": "Asha", "email": "asha@example.com", "admin": false },
+    "u_admin": { "uid": "u_admin", "name": "Depot Admin", "email": "admin@example.com", "admin": true }
+  },
+  "routes": [
+    {
+      "id": "route_market",
+      "name": "Village A - Market",
+      "busNumber": "KA-12 Village Bus",
+      "villageFrom": "Village A",
+      "villageTo": "Market",
+      "cancelled": false,
+      "updatedAt": 1720000000000,
+      "stops": [
+        { "name": "Village A", "averageMinutesFromPrevious": 0 },
+        { "name": "School Stop", "averageMinutesFromPrevious": 8 },
+        { "name": "PHC Junction", "averageMinutesFromPrevious": 7 },
+        { "name": "Market", "averageMinutesFromPrevious": 10 }
+      ]
+    },
+    {
+      "id": "route_town",
+      "name": "Temple Cross - Town Stand",
+      "busNumber": "KA-09 Town Link",
+      "villageFrom": "Temple Cross",
+      "villageTo": "Town Stand",
+      "cancelled": false,
+      "updatedAt": 1720000000000,
+      "stops": [
+        { "name": "Temple Cross", "averageMinutesFromPrevious": 0 },
+        { "name": "Milk Society", "averageMinutesFromPrevious": 6 },
+        { "name": "College Gate", "averageMinutesFromPrevious": 11 },
+        { "name": "Town Stand", "averageMinutesFromPrevious": 9 }
+      ]
+    },
+    {
+      "id": "route_lake",
+      "name": "Lake Road - Weekly Market",
+      "busNumber": "KA-18 Market Shuttle",
+      "villageFrom": "Lake Road",
+      "villageTo": "Weekly Market",
+      "cancelled": false,
+      "updatedAt": 1720000000000,
+      "stops": [
+        { "name": "Lake Road", "averageMinutesFromPrevious": 0 },
+        { "name": "Panchayat Office", "averageMinutesFromPrevious": 5 },
+        { "name": "Bus Shelter", "averageMinutesFromPrevious": 8 },
+        { "name": "Weekly Market", "averageMinutesFromPrevious": 12 }
+      ]
+    }
+  ],
+  "bus_pings": [
+    { "id": "ping_1", "routeId": "route_market", "stopIndex": 1, "stopName": "School Stop", "type": "BUS_PASSED", "reporterId": "u_ravi", "reporterName": "Ravi", "createdAt": 1720000200000 },
+    { "id": "ping_2", "routeId": "route_town", "stopIndex": 0, "stopName": "Temple Cross", "type": "ON_BUS", "reporterId": "u_asha", "reporterName": "Asha", "createdAt": 1720000100000 }
+  ],
+  "notifications": [
+    { "id": "notice_1", "routeId": "route_lake", "routeName": "Lake Road - Weekly Market", "title": "Delay reported", "message": "Road work near Panchayat Office. Expect 10 minutes delay.", "type": "DELAY", "reporterName": "Depot Admin", "createdAt": 1720000150000 }
+  ]
+}
